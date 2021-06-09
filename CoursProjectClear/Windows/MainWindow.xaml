@@ -1,0 +1,57 @@
+﻿<Window x:Class="CoursProjectClear.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoursProjectClear"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1" Background="#C4DFE6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="2" Background="#003B46"/>
+            <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        </Grid>
+        <Grid Grid.Column="0" Background="#66A5AD">
+            <StackPanel Orientation="Vertical">
+                <Image Source="/Resources/workstation.png" Width="80" HorizontalAlignment="Left" Margin="5"/>
+                <StackPanel >
+                    <Button Width="130"  Name="Redak" Click="Redak_Click" Style="{StaticResource PanelBut}">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Resources/Panel/home.png" Width="22" Margin="5"/>
+                                <TextBlock Text="Редакции" FontSize="14" Foreground="#C4DFE6"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                    <Button Width="130"  Name="Search" Click="Redak_Click" Style="{StaticResource PanelBut}">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Resources/Panel/search.png" Width="22" Margin="5"/>
+                                    <TextBlock Text="Поиск" FontSize="14" Foreground="#C4DFE6"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Width="130"  Name="Calen" Click="Redak_Click" Style="{StaticResource PanelBut}">
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="/Resources/Panel/calendar.png" Width="22" Margin="5"/>
+                                        <TextBlock Text="Календарь" FontSize="14" Foreground="#C4DFE6"/>
+                                    </StackPanel>
+                                </Button.Content>
+
+                            </Button>
+                </StackPanel>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Window>
