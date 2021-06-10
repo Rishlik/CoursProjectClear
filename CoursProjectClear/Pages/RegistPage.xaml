@@ -11,7 +11,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="360"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="1">
@@ -24,42 +24,46 @@
                 <Grid>
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="Регистрация" Foreground="#C4DFE6" HorizontalAlignment="Center"/>
-                        <ScrollViewer >
+                        <StackPanel Orientation="Horizontal">
                             <StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Имя:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
-                                <TextBox Width="220" Height="30" HorizontalAlignment="Left"/>
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Имя:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
+                                        <TextBox Width="220" x:Name="LastName" Height="30" HorizontalAlignment="Left" FontSize="15" Text ="{Binding LastName}"/>
                                     </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Фамилия:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
-                                <TextBox Width="220" Height="30" HorizontalAlignment="Left"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Фамилия:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
+                                        <TextBox Width="220" x:Name="FirstName" Height="30" HorizontalAlignment="Left" FontSize="15" Text ="{Binding FirstName}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Отчество:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
+                                        <TextBox Width="220" x:Name="MidNam" Height="30" HorizontalAlignment="Left" FontSize="15" Text ="{Binding MiddleName}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Паспорт:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
+                                        <TextBox Width="220" x:Name="Passport" Height="30" HorizontalAlignment="Left" FontSize="15" MaxLength = "10" MinLines="10" Text ="{Binding Passport}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Телефон:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
+                                        <TextBox Width="220" x:Name="Phone" Height="30" HorizontalAlignment="Left" FontSize="15" MaxLength = "10" MinLines="10" Text ="{Binding Phone}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Email:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
+                                        <TextBox Width="220" x:Name="Email" Height="30" HorizontalAlignment="Left" FontSize="15" Text ="{Binding Email}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Логин:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
+                                        <TextBox Width="220" x:Name="Login" Height="30" HorizontalAlignment="Left" FontSize="15" MaxLength = "15" MinLines ="6" 
+ Text ="{Binding Users.Login}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Пароль:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
+                                        <TextBox x:Name="Password" Width="220" Height="30" HorizontalAlignment="Left" FontSize="15" MaxLength = "15" MinLines ="6" Text="{Binding Users.Password}" />
+                                    </StackPanel>
+                                    <Button x:Name="Regist" Content="Зарегистрироваться" Click="Regist_Click"/>
                                 </StackPanel>
-                                 <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Отчество:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
-                                <TextBox Width="220" Height="30" HorizontalAlignment="Left"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Паспорт:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
-                                <TextBox Width="220" Height="30" HorizontalAlignment="Left"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Телефон:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
-                                <TextBox Width="220" Height="30" HorizontalAlignment="Left"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Email:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
-                                <TextBox Width="220" Height="30" HorizontalAlignment="Left"/>
-                                     </StackPanel>
-                                     <StackPanel Orientation="Horizontal">
-                                     <TextBlock Text="Логин:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
-                                     <TextBox Width="220" Height="30" HorizontalAlignment="Left"/>
-                                     </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Пароль:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
-                                <PasswordBox Width="220" Height="30" HorizontalAlignment="Left"/>
-                            </StackPanel>
-                             </StackPanel>
-                        </ScrollViewer>
+                        </StackPanel>
                     </StackPanel>
                 </Grid>
             </Border>

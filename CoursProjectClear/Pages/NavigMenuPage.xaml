@@ -1,0 +1,70 @@
+﻿<Page x:Class="CoursProjectClear.Pages.NavigMenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CoursProjectClear.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="150"
+      Title="NavigMenuPage">
+
+    <Grid >
+        
+            <StackPanel x:Name="NavigMenu" x:FieldModifier="public">
+                <Button Width="130"  x:Name="History" Click="History_Click" Style="{StaticResource PanelBut}">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/Panel/home.png" Width="22" Margin="5"/>
+                            <TextBlock Text="История" FontSize="14" Foreground="#C4DFE6"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Button Width="130"  Name="Search" Click="Search_Click" Style="{StaticResource PanelBut}">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/Panel/search.png" Width="22" Margin="5"/>
+                            <TextBlock Text="Поиск" FontSize="14" Foreground="#C4DFE6"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+            <Button Width="130"  Name="Calen" Click="Calen_Click" Style="{StaticResource PanelBut}">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Panel/calendar.png" Width="22" Margin="5"/>
+                        <TextBlock Text="Календарь" FontSize="14" Foreground="#C4DFE6"/>
+                    </StackPanel>
+                </Button.Content>
+
+            </Button>
+            <Button Width="130"  Name="Basket" Click="Basket_Click" Style="{StaticResource PanelBut}">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Panel/shopping.png" Width="22" Margin="5"/>
+                        <TextBlock Text="Корзина" FontSize="14" Foreground="#C4DFE6"/>
+                    </StackPanel>
+                </Button.Content>
+
+            </Button>
+            <Button Width="130"  Name="Printing" Click="Printing_Click" Style="{StaticResource PanelBut}">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Panel/print.png" Width="22" Margin="5"/>
+                        <TextBlock Text="Печать" FontSize="14" Foreground="#C4DFE6"/>
+                    </StackPanel>
+                </Button.Content>
+
+            </Button>
+            <Button Width="130"  Name="Setting" Click="Setting_Click" Style="{StaticResource PanelBut}">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Panel/Settings.png" Width="22" Margin="5"/>
+                        <TextBlock Text="Настройки" FontSize="14" Foreground="#C4DFE6"/>
+                    </StackPanel>
+                </Button.Content>
+
+            </Button>
+        </StackPanel>
+        
+       
+    </Grid>
+</Page>

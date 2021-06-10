@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoursProjectClear", "CoursProjectClear\CoursProjectClear.csproj", "{C0B6D410-B3AF-4F81-9EC9-9D41470BC70A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryTest", "..\..\..\Programmic\Тесты для курсовой\LibraryTest\LibraryTest\LibraryTest\LibraryTest.csproj", "{77B7EFDF-81BB-4485-A2B9-5DD4BF4BF5BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectTest", "..\..\..\Programmic\Тесты для курсовой\LibraryTest\LibraryTest\ProjectTest\ProjectTest.csproj", "{4C8F669B-A077-4784-91AD-BBAFEF79EC80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C0B6D410-B3AF-4F81-9EC9-9D41470BC70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0B6D410-B3AF-4F81-9EC9-9D41470BC70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0B6D410-B3AF-4F81-9EC9-9D41470BC70A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77B7EFDF-81BB-4485-A2B9-5DD4BF4BF5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B7EFDF-81BB-4485-A2B9-5DD4BF4BF5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B7EFDF-81BB-4485-A2B9-5DD4BF4BF5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B7EFDF-81BB-4485-A2B9-5DD4BF4BF5BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C8F669B-A077-4784-91AD-BBAFEF79EC80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C8F669B-A077-4784-91AD-BBAFEF79EC80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C8F669B-A077-4784-91AD-BBAFEF79EC80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C8F669B-A077-4784-91AD-BBAFEF79EC80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

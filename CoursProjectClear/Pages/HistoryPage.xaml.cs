@@ -1,5 +1,4 @@
-﻿using CoursProjectClear.Classes;
-using CoursProjectClear.Pages;
+﻿using CoursProjectClear.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,27 +14,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CoursProjectClear
+namespace CoursProjectClear.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для HistoryPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HistoryPage : Page
     {
-
-        public MainWindow()
+        public HistoryPage()
         {
             InitializeComponent();
-            MainFrame.Navigate(new AutoPage());
-            
-            Navig.MainFrame = MainFrame;
-            Navig.MenuFrame = MenuFrame;
-
         }
-
-        private void Redak_Click(object sender, RoutedEventArgs e)
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-
+            SaleComponentsEntities.getContext().ChangeTracker.Entries().ToList();
+            dGridHistory.ItemsSource = SaleComponentsEntities.getContext().History.ToList();
         }
     }
 }

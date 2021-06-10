@@ -58,29 +58,20 @@
         <Style TargetType="TextBox" >
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Background" Value="#C4DFE6"/>
+            <Setter Property="Foreground" Value="#003B46"/>
+            <Setter Property="FontFamily" Value="Georgia"/>
+            <Setter Property="FontSize" Value="10"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
-                        <Border CornerRadius="10" BorderThickness="0" Background="{TemplateBinding Background}" x:Name="Bd"/>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
-                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="Width" Value="Auto">
-                                <Setter Property="MinWidth" Value="100"/>
-                            </Trigger>
-                            <Trigger Property="Height" Value="Auto">
-                                <Setter Property="MinHeight" Value="20"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
+                        <Border x:Name="borber" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True" CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
             <!--Setter Property="Background" Value="#C4DFE6"/-->
-            <Setter Property="Foreground" Value="#003B46"/>
-            <Setter Property="FontFamily" Value="Georgia"/>
-            <Setter Property="FontSize" Value="15"/>
+            
         </Style>
 
         <Style TargetType="PasswordBox">
@@ -92,7 +83,9 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="PasswordBox">
-                        <Border CornerRadius="10" BorderThickness="0" Background="{TemplateBinding Background}" Opacity="1" />
+                        <Border x:Name="borber" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True" CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -107,18 +100,16 @@
             <Setter Property="Foreground" Value="#003B46"/>
         </Style>
 
-        
+
 
         <Style TargetType="ComboBox">
             <Setter Property="Margin" Value="5"/>
-            <Setter Property="SnapsToDevicePixels" Value="True"/>
-            <Setter Property="OverridesDefaultStyle" Value="True"/>
             <Setter Property="Height" Value="30"/>
             <Setter Property="Width" Value="150"/>
             <Setter Property="FontFamily" Value="Georgia"/>
             <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="#003B46"/>
+            <Setter Property="Background" Value="#C4DFE6"/>
         </Style>
-
-        
     </Application.Resources>
 </Application>

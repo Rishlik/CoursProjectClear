@@ -24,8 +24,8 @@
                 <Grid>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBlock Text="Авторизация" Foreground="#C4DFE6" HorizontalAlignment="Center" />
-                        <TextBox Width="180" Height="30" />
-                        <PasswordBox Width="180" Height="30" />
+                        <TextBox Width="180" Height="30" x:Name="txtLogin" FontSize="15"/>
+                        <PasswordBox Width="180" Height="30" x:Name="txtPassword" FontSize="15"/>
                         <Button x:Name="Auto" Click="Auto_Click" Width="150" Height="30" Foreground="#003B46">
                             <Button.Content>
                                 <TextBlock Text="Вход" FontSize="20"/>

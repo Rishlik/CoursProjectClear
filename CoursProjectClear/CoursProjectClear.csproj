@@ -38,9 +38,20 @@
     <ApplicationIcon>workstation.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -63,11 +74,39 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\BasketPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CalendPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HistoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NavigMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PrintPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProductPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\RegistPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\SectionsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SettingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -79,15 +118,102 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Base\Basket.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Categories.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Components.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Compos_Congsign.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Counterparties.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\History.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\List_Sale.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Privileges.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Purchase.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Sale.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\SaleModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaleModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\SaleModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\SaleModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaleModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Services.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Staffs.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Sum.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\sysdiagrams.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Type.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Users.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Сonsignment.cs">
+      <DependentUpon>SaleModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Navig.cs" />
     <Compile Include="Pages\AutoPage.xaml.cs">
       <DependentUpon>AutoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BasketPage.xaml.cs">
+      <DependentUpon>BasketPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CalendPage.xaml.cs">
+      <DependentUpon>CalendPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HistoryPage.xaml.cs">
+      <DependentUpon>HistoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NavigMenuPage.xaml.cs">
+      <DependentUpon>NavigMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrintPage.xaml.cs">
+      <DependentUpon>PrintPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductPage.xaml.cs">
+      <DependentUpon>ProductPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegistPage.xaml.cs">
       <DependentUpon>RegistPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SectionsPage.xaml.cs">
       <DependentUpon>SectionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -113,6 +239,14 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EntityDeploy Include="Base\SaleModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SaleModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Base\SaleModel.edmx.diagram">
+      <DependentUpon>SaleModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -122,7 +256,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Base\" />
+    <Content Include="Base\SaleModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SaleModel.edmx</DependentUpon>
+      <LastGenOutput>SaleModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Base\SaleModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SaleModel.edmx</DependentUpon>
+      <LastGenOutput>SaleModel.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Resources\Panel\print.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\workstation.png" />
@@ -140,6 +284,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="workstation.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Panel\shopping.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

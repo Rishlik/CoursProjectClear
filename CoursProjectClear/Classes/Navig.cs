@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace CoursProjectClear.Classes
 {
-    class Navig
+    public class Navig
     {
         public static System.Windows.Controls.Frame MainFrame { get; set; }
+        public static System.Windows.Controls.Frame MenuFrame { get; set; }
+
     }
 }

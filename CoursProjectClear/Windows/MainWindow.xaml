@@ -21,35 +21,9 @@
             <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
         </Grid>
         <Grid Grid.Column="0" Background="#66A5AD">
-            <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical" >
                 <Image Source="/Resources/workstation.png" Width="80" HorizontalAlignment="Left" Margin="5"/>
-                <StackPanel >
-                    <Button Width="130"  Name="Redak" Click="Redak_Click" Style="{StaticResource PanelBut}">
-                        <Button.Content>
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="/Resources/Panel/home.png" Width="22" Margin="5"/>
-                                <TextBlock Text="Редакции" FontSize="14" Foreground="#C4DFE6"/>
-                            </StackPanel>
-                        </Button.Content>
-                    </Button>
-                    <Button Width="130"  Name="Search" Click="Redak_Click" Style="{StaticResource PanelBut}">
-                            <Button.Content>
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="/Resources/Panel/search.png" Width="22" Margin="5"/>
-                                    <TextBlock Text="Поиск" FontSize="14" Foreground="#C4DFE6"/>
-                                </StackPanel>
-                            </Button.Content>
-                        </Button>
-                        <Button Width="130"  Name="Calen" Click="Redak_Click" Style="{StaticResource PanelBut}">
-                                <Button.Content>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="/Resources/Panel/calendar.png" Width="22" Margin="5"/>
-                                        <TextBlock Text="Календарь" FontSize="14" Foreground="#C4DFE6"/>
-                                    </StackPanel>
-                                </Button.Content>
-
-                            </Button>
-                </StackPanel>
+                <Frame x:Name="MenuFrame"/>
             </StackPanel>
 
         </Grid>
