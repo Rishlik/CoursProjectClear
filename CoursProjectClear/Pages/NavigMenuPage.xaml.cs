@@ -33,7 +33,7 @@ namespace CoursProjectClear.Pages
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            Navig.MainFrame.Navigate(new SectionsPage());
+            Navig.MainFrame.Navigate(new ProductPage());
         }
 
         private void Calen_Click(object sender, RoutedEventArgs e)
@@ -54,6 +54,11 @@ namespace CoursProjectClear.Pages
         private void Printing_Click(object sender, RoutedEventArgs e)
         {
             Navig.MainFrame.Navigate(new PrintPage());
+        }
+
+        private void Main_Click(object sender, RoutedEventArgs e)
+        {
+            Navig.MainFrame.Navigate(new SeactionsPage());
         }
     }
 }

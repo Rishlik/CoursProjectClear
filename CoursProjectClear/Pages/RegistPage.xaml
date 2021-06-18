@@ -60,7 +60,18 @@
                                         <TextBlock Text="Пароль:" Foreground="#C4DFE6" FontSize="20" Width="100"/>
                                         <TextBox x:Name="Password" Width="220" Height="30" HorizontalAlignment="Left" FontSize="15" MaxLength = "15" MinLines ="6" Text="{Binding Users.Password}" />
                                     </StackPanel>
-                                    <Button x:Name="Regist" Content="Зарегистрироваться" Click="Regist_Click"/>
+                                    <StackPanel Orientation="Vertical">
+                                        <Button x:Name="Regist"  Click="Regist_Click">
+                                            <Button.Content>
+                                                <TextBlock Text="Зарегистрироваться" FontSize="15"/>
+                                            </Button.Content>
+                                        </Button>
+                                        <Button x:Name="Back" Click="Back_Click">
+                                            <Button.Content>
+                                                <TextBlock Text="Назад" FontSize="15"/>
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>

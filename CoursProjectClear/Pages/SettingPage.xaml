@@ -29,28 +29,56 @@
             </StackPanel>
 
         </StackPanel>
-        <StackPanel Grid.Row="2" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
-            <Button   Height="40" Width="140" VerticalAlignment="Center" HorizontalAlignment="Left" Margin=" 5" Content="Выход из системы" Command="{Binding ClickButtonCommand}" x:Name="Exit" Click="Exit_Click"/>
-            <Button    Height="40" Width="140" VerticalAlignment="Center" HorizontalAlignment="Left" Margin=" 5" Content="Редактировать" x:Name="EditUser" Click="EditUser_Click"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Width="150" HorizontalAlignment="Left">
+            <Button   Height="40" Width="140" VerticalAlignment="Center" HorizontalAlignment="Left" Margin=" 5"   x:Name="Exit" Click="Exit_Click">
+                <Button.Content>
+                    <TextBlock Text="Выход из системы" FontSize="15"/>
+                </Button.Content>
+            </Button>
+            
         </StackPanel>
         <Frame Grid.Row="1" Name="EditFrame"/>
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <StackPanel Orientation="Horizontal" >
-                <StackPanel Orientation="Vertical" >
-                    <TextBlock Text="Паспорт:"  FontSize="25" Margin="5, 10" Width="150" />
-                    <TextBlock Text="Отчество:"  FontSize="25" Margin="5, 10" Width="150" />
-                    <TextBlock Text="Email:" FontSize="25" Margin="5, 10" Width="150" />
-                    <TextBlock Text="Телефон:"  FontSize="25" Margin="5, 10" Width="150" />
-                    <TextBlock Text="Должность:"  FontSize="25" Margin="5, 10" Width="150" />
-                </StackPanel >
-                <StackPanel Orientation="Vertical" >
-                <TextBlock Text="{Binding Passport}"  FontSize="25" Margin="5, 10" Width="150"  />
-                <TextBlock Text="{Binding MiddleName}"  FontSize="25" Margin="5, 10" Width="150" />
-                <TextBlock Text="{Binding Email}"  FontSize="25" Margin="5, 10" Width="150" />
-                <TextBlock Text="{Binding Phone}"  FontSize="25" Margin="5, 10" Width="150" />
-                <TextBlock Text="{Binding Privilege}"  FontSize="25" Margin="5, 10" Width="150" />
-                </StackPanel>
-            </StackPanel>
-        </StackPanel>
+
+        <ListView Grid.Row="1" Name="listViewTour" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" Background="#66A5AD">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="20" Width="450">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Width="250" Grid.Row="1" Stretch="UniformToFill" HorizontalAlignment="Left" Margin="5">
+                            <Image.Source>
+                                <Binding Path="ImagePreview"></Binding>
+                            </Image.Source>
+                        </Image>
+                        <StackPanel Orientation="Horizontal" Grid.Row="2">
+                            <TextBlock Text="Название: " FontSize="15" HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock Text="{Binding Passport}" FontSize="15" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Row="3">
+                            <TextBlock Text="Цена: " FontSize="15" HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock Text="{Binding Phone}" FontSize="15" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Orientation="Horizontal">
+                            <TextBlock Text="Описание: " FontSize="15"  HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock Text="{Binding Email}" FontSize="15" HorizontalAlignment="Left"  ></TextBlock>
+                        </StackPanel>
+
+
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

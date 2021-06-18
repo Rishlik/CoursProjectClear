@@ -1,4 +1,5 @@
 ﻿using CoursProjectClear.Base;
+using CoursProjectClear.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,12 +79,17 @@ namespace CoursProjectClear.Pages
             try
             {
                 SaleComponentsEntities.getContext().SaveChanges();
-                MessageBox.Show("Информация сохранена");
+                MessageBox.Show("Информация сохранена, вернитесь и авторизируйтесь");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            Navig.MainFrame.Navigate(new AutoPage());
         }
     }
 }

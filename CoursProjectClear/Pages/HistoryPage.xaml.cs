@@ -1,4 +1,5 @@
 ﻿using CoursProjectClear.Base;
+using CoursProjectClear.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,5 +31,7 @@ namespace CoursProjectClear.Pages
             SaleComponentsEntities.getContext().ChangeTracker.Entries().ToList();
             dGridHistory.ItemsSource = SaleComponentsEntities.getContext().History.ToList();
         }
+
+       
     }
 }

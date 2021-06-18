@@ -11,10 +11,18 @@
     <Grid >
         
             <StackPanel x:Name="NavigMenu" x:FieldModifier="public">
-                <Button Width="130"  x:Name="History" Click="History_Click" Style="{StaticResource PanelBut}">
+            <Button Width="130"  x:Name="Main" Click="Main_Click" Style="{StaticResource PanelBut}">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Panel/home.png" Width="22" Margin="5"/>
+                        <TextBlock Text="Главная" FontSize="14" Foreground="#C4DFE6"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button Width="130"  x:Name="History" Click="History_Click" Style="{StaticResource PanelBut}">
                     <Button.Content>
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resources/Panel/home.png" Width="22" Margin="5"/>
+                            <Image Source="/Resources/Panel/clock.png" Width="22" Margin="5"/>
                             <TextBlock Text="История" FontSize="14" Foreground="#C4DFE6"/>
                         </StackPanel>
                     </Button.Content>

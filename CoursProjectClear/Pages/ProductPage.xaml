@@ -40,7 +40,7 @@
                         </ListView.ItemsPanel>
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <Grid Margin="20" Width="250">
+                                <Grid Margin="20" Width="450">
                                     <Grid.RowDefinitions>
                                         <RowDefinition></RowDefinition>
                                         <RowDefinition></RowDefinition>
@@ -56,22 +56,19 @@
                                         </Image.Source>
                                     </Image>
                                     <StackPanel Orientation="Horizontal" Grid.Row="2">
-                                        <TextBlock Text="Название: " HorizontalAlignment="Left"></TextBlock>
-                                        <TextBlock Text="{Binding Name}" HorizontalAlignment="Left"></TextBlock>
+                                        <TextBlock Text="Название: " FontSize="15" HorizontalAlignment="Left"></TextBlock>
+                                        <TextBlock Text="{Binding Name}" FontSize="15" HorizontalAlignment="Left"></TextBlock>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal" Grid.Row="3">
-                                        <TextBlock Text="Описание: " HorizontalAlignment="Left"></TextBlock>
-                                        <TextBlock Text="{Binding Cost}" HorizontalAlignment="Left"></TextBlock>
+                                        <TextBlock Text="Цена: " FontSize="15" HorizontalAlignment="Left"></TextBlock>
+                                        <TextBlock Text="{Binding Cost}" FontSize="15" HorizontalAlignment="Left"></TextBlock>
                                     </StackPanel>
                                     <StackPanel Grid.Row="4" Orientation="Horizontal">
-                                        <TextBlock Text="Цена: "  HorizontalAlignment="Left"></TextBlock>
-                                        <TextBlock Text="{Binding Description}" HorizontalAlignment="Left"></TextBlock>
+                                        <TextBlock Text="Описание: " FontSize="15"  HorizontalAlignment="Left"></TextBlock>
+                                        <TextBlock Text="{Binding Description}" FontSize="15" HorizontalAlignment="Left"  ></TextBlock>
                                     </StackPanel>
 
-                                    <StackPanel Orientation="Horizontal" Grid.Row="5">
-                                        <TextBlock Text="Количество билетов: " HorizontalAlignment="Left"></TextBlock>
-                                        <TextBlock Text="{Binding Categories.Name}" HorizontalAlignment="Left"></TextBlock>
-                                    </StackPanel>
+                                    
                                 </Grid>
                             </DataTemplate>
                         </ListView.ItemTemplate>

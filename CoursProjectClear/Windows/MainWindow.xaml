@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoursProjectClear"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowState="Maximized" >
+        Title="PixelC" Height="450" Width="800" WindowState="Maximized" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
@@ -23,7 +23,7 @@
         <Grid Grid.Column="0" Background="#66A5AD">
             <StackPanel Orientation="Vertical" >
                 <Image Source="/Resources/workstation.png" Width="80" HorizontalAlignment="Left" Margin="5"/>
-                <Frame x:Name="MenuFrame"/>
+                <Frame x:Name="MenuFrame" NavigationUIVisibility="Hidden"/>
             </StackPanel>
 
         </Grid>

@@ -8,6 +8,27 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PrintPage">
 
+    <Page.Resources>
+        
+        <ItemsPanelTemplate x:Key="HorizontalPanel">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+        </ItemsPanelTemplate>
+        <DataTemplate x:Key="SingleBarTemplate">
+            <Rectangle Fill="{Binding color}" Width="{Binding width}" />
+        </DataTemplate>
+        <DataTemplate x:Key="SingleCodeTemplate">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Bottom" Text="{Binding}" />
+                
+            </DockPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="BarcodeTemplate">
+            <ItemsControl ItemsSource="{Binding}"
+            ItemsPanel="{StaticResource HorizontalPanel}"
+            ItemTemplate="{StaticResource SingleCodeTemplate}"
+            Height="100" />
+        </DataTemplate>
+    </Page.Resources>
     <Grid>
         <DocumentViewer x:Name="documentViewer">
             <FixedDocument>

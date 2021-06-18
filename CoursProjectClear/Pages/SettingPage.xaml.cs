@@ -1,4 +1,5 @@
 ﻿using CoursProjectClear.Base;
+using CoursProjectClear.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,12 +35,10 @@ namespace CoursProjectClear.Pages
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-
+            Navig.MainFrame.Navigate(new AutoPage());
+            Navig.MenuFrame.Navigate(new ZeroPage());
         }
 
-        private void EditUser_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -20,6 +20,7 @@
                 <RowDefinition />
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
+            <TextBlock Text="На Доработке" FontSize="15"/>
             <Border Grid.Row="1" CornerRadius="25" Background="#003B46">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -28,8 +29,16 @@
                         <RowDefinition Height="35"/>
                     </Grid.RowDefinitions>
                     <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Height="25" Width="120" x:Name="Save" />
-                        <Button Height="25" Width="120" x:Name="Load" />
+                        <Button Height="25" Width="120" x:Name="Delete"  >
+                            <Button.Content>
+                                <TextBlock FontSize="15" Text="Очистить"/>
+                            </Button.Content>
+                        </Button>
+                        <Button Height="25" Width="120" x:Name="Print" >
+                            <Button.Content>
+                                <TextBlock FontSize="15" Text="Печать"/>
+                            </Button.Content>
+                        </Button>
                     </StackPanel>
                     <DataGrid x:Name="Basket" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
                         <DataGrid.Columns>

@@ -36,7 +36,7 @@ namespace CoursProjectClear.Pages
             if (autorize(txtLogin.Text, txtPassword.Password))
             {
                 MessageBox.Show("Вы успешно авторизованы", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
-                Navig.MainFrame.Navigate(new SectionsPage());
+                Navig.MainFrame.Navigate(new SeactionsPage());
                 Navig.MenuFrame.Navigate(new NavigMenuPage());
                 
             }

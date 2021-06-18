@@ -19,9 +19,9 @@ namespace CoursProjectClear.Pages
     /// <summary>
     /// Логика взаимодействия для SectionsPage.xaml
     /// </summary>
-    public partial class SectionsPage : Page
+    public partial class SeactionsPage : Page
     {
-        public SectionsPage()
+        public SeactionsPage()
         {
             InitializeComponent();
             comboFilter.Items.Add("Компоненты");

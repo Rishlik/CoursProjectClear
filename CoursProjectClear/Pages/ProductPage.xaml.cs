@@ -39,7 +39,7 @@ namespace CoursProjectClear.Pages
         private void Update()
         {
             listViewTour.ItemsSource = SaleComponentsEntities.getContext().Components.ToList().Where(p => p.Name.ToLower().Contains(txtBoxSearch.Text.ToLower())).ToList();
-            listViewTour.ItemsSource = SaleComponentsEntities.getContext().Services.ToList().Where(p => p.Name.ToLower().Contains(txtBoxSearch.Text.ToLower())).ToList();
+           
         }
     }
 }

@@ -9,6 +9,7 @@
       Title="HistoryPage" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
+        
         <DataGrid AutoGenerateColumns="False" Name="dGridHistory" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Логин" Binding="{Binding Login}" Width="*"></DataGridTextColumn>
@@ -16,5 +17,7 @@
                 <DataGridTextColumn Header="Результат" Binding="{Binding Successful}" Width="*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
+
+        
     </Grid>
 </Page>
